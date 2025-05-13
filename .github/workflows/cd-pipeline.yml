@@ -46,7 +46,7 @@ jobs:
           D_USER: ${{secrets.DOCKER_USER}}
           D_PASS: ${{secrets.DOCKER_PASSWORD}}
         run: |
-          docker login -u $D_USER -p $D_PASS
+          docker login -u $D_USER -p $D_PASS docker.io 
       - name: Build and tag Image
         run: |
           docker build -t ${{env.IMAGE}} .
