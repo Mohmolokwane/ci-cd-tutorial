@@ -47,7 +47,7 @@ jobs:
           D_PASS: ${{secrets.DOCKER_PASSWORD}}
         run: |
          - name: Docker Login
-  run: echo "${{ secrets.D_PASS }}" | docker login -u "${{ secrets.D_USER }}" --password-stdin docker.io
+  run: echo "${{ secrets.D_PASS }}" | docker login -u "${{ secrets.D_USER }}" --password-stdin docker.com
       - name: Build and tag Image
         run: |
           docker build -t ${{env.IMAGE}} .
