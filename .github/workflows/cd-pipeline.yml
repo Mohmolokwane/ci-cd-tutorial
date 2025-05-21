@@ -10,7 +10,7 @@ on:
 
 env:
   PORT: 5001
-  IMAGE: docker.io/dockerhub-bmolokwane/ci-cd-tutorial-app:${{ github.sha }}
+  IMAGE: docker.io/bmolokwane/ci-cd-tutorial-app:${{ github.sha }}
 
 jobs:
   test:
